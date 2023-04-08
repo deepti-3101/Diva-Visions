@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="Styles.css">
+    <title>DreamAble</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js" ></script>
+</head>
+<body>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <model-viewer src="Asserts\\furniture_-_galactonauta_game.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                Activate AR
+            </button>
+        </model-viewer>
+
+
+          <div class="text">Galactonauta Game</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <model-viewer src="Asserts\\livingroom_furniture.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+        <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+            Activate AR
+        </button>
+    </model-viewer>
+          <div class="text">Livingroom Furniture</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <model-viewer src="Asserts\office_chair.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+            <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                Activate AR
+            </button>
+        </model-viewer>
+          <div class="text">Office Chair</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">4 / 6</div>
+            <model-viewer src="Asserts\\furniture_set.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+              <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                  Activate AR
+              </button>
+          </model-viewer>
+            <div class="text">Furniture Set</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">5 / 6</div>
+            <model-viewer src="Asserts\\furniture.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+              <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                  Activate AR
+              </button>
+          </model-viewer>
+            <div class="text">Furniture</div>
+          </div>
+
+
+          <div class="mySlides fade">
+            <div class="numbertext">6 / 6</div>
+            <model-viewer src="Asserts\\some_furniture.glb" ar camera-controls auto-rotate ar ar-modes="scene-viewer webxr" camera-controls touch-action="pan-y" auto-rotate>
+              <button slot="ar-button" style="background-color: white; border-radius: 4px; border: none; position: absolute; top: 16px; right: 16px; ">
+                  Activate AR
+              </button>
+          </model-viewer>
+            <div class="text">Furniture</div>
+          </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+         
+        </div>
+        <br>
+        
+        <div style="text-align:center" class="chat">
+            <H1>Colab Room : Beatles</H1>
+            <Hr color="black">
+                <div class="container">
+                    <img src="profile1.jpg" alt="Avatar" style="width:100%;">
+                    <p>Hello. I really like the yellow chair</p>
+                    <span class="time-right">04:00</span>
+                  </div>
+                  
+                  <div class="container darker">
+                    <img src="Profile2.jpeg" alt="Avatar" class="right" style="width:100%;">
+                    <p>Hey! thanks, but it seems to different from others</p>
+                    <span class="time-left">04:01</span>
+                  </div>
+                  <div class="container">
+                    <img src="profile1.jpg" alt="Avatar" style="width:100%;">
+                    <p>well, i don't think so, use can choose it</p>
+                    <span class="time-right">04:03</span>
+                  </div>
+                  
+                  <div class="container darker">
+                    <img src="Profile2.jpeg" alt="Avatar" class="right" style="width:100%;">
+                    <p>Arh, thanks for you input, i really needed it</p>
+                    <span class="time-left">04:05</span>
+                  </div>
+        </div>
+      
+</body>
+
+    
+    <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+</html>
+
